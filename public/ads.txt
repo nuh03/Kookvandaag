@@ -1,0 +1,5 @@
+# WatEtenWeVandaag ads.txt
+# Vul je eigen AdSense publisher ID hieronder in en verwijder deze commentaarregels bij livegang.
+# Formaat: domain, publisher ID, relatie, certificatie ID
+# Voor Google AdSense:
+google.com, pub-xxxxxxxxxxxxxxxx, DIRECT, f08c47fec0942fa0

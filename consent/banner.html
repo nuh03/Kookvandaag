@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookievoorkeuren – WatEtenWeVandaag</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="consent.js"></script>
+</head>
+<body>
+  <!-- Cookiebanner -->
+  <div id="wev-cookie-banner" class="wev-banner" hidden>
+    <div class="wev-banner__content">
+      <h2 class="wev-banner__title">Cookies op WatEtenWeVandaag</h2>
+      <p class="wev-banner__text">We gebruiken cookies voor essentiële functies en, met jouw toestemming, voor analyses en advertenties. Beheer je voorkeuren hieronder.</p>
+      <div class="wev-banner__actions">
+        <button class="wev-btn wev-btn--primary" data-consent-accept-all>Alles accepteren</button>
+        <button class="wev-btn wev-btn--secondary" data-consent-reject-all>Alles weigeren</button>
+        <button class="wev-btn wev-btn--ghost" data-consent-open-prefs>Voorkeuren</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Voorkeurenpaneel -->
+  <div id="wev-cookie-modal" class="wev-modal" hidden role="dialog" aria-modal="true" aria-labelledby="wev-modal-title">
+    <div class="wev-modal__dialog">
+      <div class="wev-modal__header">
+        <h3 id="wev-modal-title">Cookievoorkeuren</h3>
+        <button class="wev-modal__close" data-consent-close-prefs aria-label="Sluiten">×</button>
+      </div>
+      <div class="wev-modal__body">
+        <div class="wev-toggle">
+          <div>
+            <strong>Strikt noodzakelijke cookies</strong>
+            <p>Altijd actief. Nodig voor basisfunctionaliteit en beveiliging.</p>
+          </div>
+          <div>
+            <label class="wev-switch">
+              <input type="checkbox" checked disabled>
+              <span class="wev-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="wev-toggle">
+          <div>
+            <strong>Analytics</strong>
+            <p>Helpt ons de site te verbeteren (bijv. Google Analytics).</p>
+          </div>
+          <div>
+            <label class="wev-switch">
+              <input id="wev-toggle-analytics" type="checkbox">
+              <span class="wev-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="wev-toggle">
+          <div>
+            <strong>Advertenties</strong>
+            <p>Toont niet-gepersonaliseerde of gepersonaliseerde advertenties (bijv. AdSense) afhankelijk van je keuze.</p>
+          </div>
+          <div>
+            <label class="wev-switch">
+              <input id="wev-toggle-ads" type="checkbox">
+              <span class="wev-slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="wev-toggle">
+          <div>
+            <strong>Marketing</strong>
+            <p>Voor remarketing en personalisatie (bijv. pixels).</p>
+          </div>
+          <div>
+            <label class="wev-switch">
+              <input id="wev-toggle-marketing" type="checkbox">
+              <span class="wev-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="wev-modal__footer">
+        <button class="wev-btn wev-btn--primary" data-consent-save-prefs>Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="#" data-consent-footer-link>Cookievoorkeuren aanpassen</a>
+  </footer>
+
+  <!-- Voorbeeld van uitgestelde scripts (worden pas geladen na consent) -->
+  <script type="text/plain" data-consent="analytics" data-src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script type="text/plain" data-consent="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+  </script>
+
+  <script type="text/plain" data-consent="ads">
+    (adsbygoogle=window.adsbygoogle||[]).push({});
+  </script>
+</body>
+</html>
